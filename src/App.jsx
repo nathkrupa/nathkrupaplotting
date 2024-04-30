@@ -4,6 +4,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Vision from "./pages/Vision";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
       </div>
       <div className="min-h-screen">
         <About />
+      </div>
+      <div className="min-h-screen">
+        <Vision />
       </div>
     </>
   );
