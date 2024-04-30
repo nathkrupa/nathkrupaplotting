@@ -9,7 +9,7 @@ const Home = () => {
     }
   };
   return (
-    <div className="w-full flex flex-col max-md:bg-[url(https://res.cloudinary.com/dvdrkucjh/image/upload/e6qunvjoj6y0r0chronx)] max-md:bg-cover bg-no-repeat mt-10 shadow-md">
+    <div className="w-full flex flex-col max-md:bg-[url(https://res.cloudinary.com/dvdrkucjh/image/upload/e6qunvjoj6y0r0chronx)] max-md:bg-cover bg-no-repeat mt-10 ">
       <div className="flex">
         {/* div1 */}
         <div className="flex flex-col justify-center my-14 py-28 md:pl-28 p-5 flex-1">
