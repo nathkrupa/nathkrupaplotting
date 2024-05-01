@@ -16,16 +16,16 @@ function App() {
         <Navbar />
         <Home />
       </div>
-      <div id="about" className="min-h-screen">
+      <div id="about" className="md:min-h-screen">
         <About />
       </div>
-      <div id="vision" className="min-h-screen">
+      <div id="vision" className="md:min-h-screen">
         <Vision />
       </div>
-      <div id="projects" className="min-h-screen">
+      <div id="projects" className="md:min-h-screen">
         <Projects />
       </div>
-      <div id="inauguration" className="min-h-screen">
+      <div id="inauguration" className="md:min-h-screen">
         <Inauguration />
       </div>
       <div id="contact">
