@@ -32,16 +32,21 @@ const Navbar = () => {
         {/* Navigation items for larger screens */}
         <ul className="hidden md:flex gap-16 text-lg font-semibold font-poppins">
           <li className="hover:text-purple-700 ">
-            <Link to={"/"}>Home</Link>{" "}
+            <Link onClick={() => scrollToSection("home")}>Home</Link>{" "}
           </li>
           <li className="hover:text-purple-700">
             <Link onClick={() => scrollToSection("about")}>About</Link>
           </li>
           <li className="hover:text-purple-700">
+            <Link onClick={() => scrollToSection("vision")}>Vision</Link>
+          </li>
+          <li className="hover:text-purple-700">
             <Link onClick={() => scrollToSection("projects")}>Projects</Link>
           </li>
           <li className="hover:text-purple-700">
-            <Link onClick={() => scrollToSection("customers")}>Customers</Link>
+            <Link onClick={() => scrollToSection("inauguration")}>
+              Inaugration
+            </Link>
           </li>
           <li className="hover:text-purple-700">
             <Link onClick={() => scrollToSection("contact")}>Contact</Link>
@@ -70,6 +75,16 @@ const Navbar = () => {
                 <Link
                   onClick={() => {
                     setShowMenu(false);
+                    scrollToSection("vision");
+                  }}
+                >
+                  Vision{" "}
+                </Link>
+              </li>
+              <li className="px-4 py-2 hover:bg-gray-100">
+                <Link
+                  onClick={() => {
+                    setShowMenu(false);
                     scrollToSection("projects");
                   }}
                 >
@@ -80,10 +95,10 @@ const Navbar = () => {
                 <Link
                   onClick={() => {
                     setShowMenu(false);
-                    scrollToSection("customers");
+                    scrollToSection("inaugration");
                   }}
                 >
-                  Customers
+                  Inaugration
                 </Link>
               </li>
               <li className="px-4 py-2 hover:bg-gray-100">

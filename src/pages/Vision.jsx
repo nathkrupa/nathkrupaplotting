@@ -4,24 +4,20 @@ import { CLOUDINARY_URL } from "../utils/constants";
 const Vision = () => {
   return (
     <div className="flex flex-col justify-center items-center">
-      <h1 className="m-4 text-xl md:text-3xl font-medium px-20 py-4 rounded-l-full rounded-r-full bg-blue-100 w-fit">
+      <h1 className="m-4 text-2xl md:text-4xl font-medium px-20 py-4 rounded-l-full rounded-r-full bg-blue-100 w-fit">
         Vision
       </h1>
 
-      <div className="w-full flex justify-center m-4 p-4 gap-8">
+      <div className="w-full flex flex-wrap justify-center m-4 p-4 gap-8">
         {" "}
-        <div className="w-fit flex ">
-          <div>
-            <img
-              className=""
-              src={`${CLOUDINARY_URL}lzbq3jy76gw4sf3udhry`}
-              alt="about"
-            />
-            <div className="p-6 w-24 mx-4 rounded-bl-full  bg-blue-100"></div>
-          </div>
-          <div className="p-6 h-24 my-4 rounded-tr-full bg-blue-100"></div>
+        <div>
+          <img
+            className=""
+            src={`${CLOUDINARY_URL}diisppiao5iejomctv9o`}
+            alt="about"
+          />
         </div>
-        <div className="w-1/2 text-xl ">
+        <div className="md:w-1/2 md:text-xl p-4">
           <p>
             Our vision for Nathkrupa Construction is to redefine the
             construction industry through a steadfast commitment to excellence,
