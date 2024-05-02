@@ -29,18 +29,17 @@ const Footer = () => {
           />
           <h1 className="text-2xl font-semibold my-8">Nathkrupa Developers</h1>
         </div>
-
         <div className="px-4 py-3 bg-white my-8 flex border justify-between border-gray-300 rounded-md shadow-sm">
           <input
             type="text"
             placeholder="Message..."
-            className=" py-2 outline-none border-none"
+            className=" py-2 outline-none border-none "
           />
-          <button className="px-6 py-2 bg-purple-600 text-white p rounded-md">
+          <button className="px-6 py-2 bg-purple-600 text-white  rounded-md">
             Submit{" "}
           </button>
         </div>
-        <div className="flex justify-between mx-3">
+        <div className="flex justify-between mx-3 max-md::max-w-80">
           <div className="flex flex-col gap-6 font-semibold">
             <h1 className="flex">
               <span>
@@ -98,7 +97,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="h-60 w-96">
+      <div className="h-60 w-80">
         <h1 className="text-2xl font-semibold ">Office Location</h1>
         <GoogleMaps />
       </div>

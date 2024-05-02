@@ -11,28 +11,32 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
-      <div id="home">
-        <Navbar />
-        <Home />
+    <div className="max-w-screen-2xl overflow-hidden">
+      {" "}
+      {/* Added overflow-hidden */}
+      <div className="max-w-full mx-auto">
+        <div id="home">
+          <Navbar />
+          <Home />
+        </div>
+        <div id="about" className="md:min-h-screen">
+          <About />
+        </div>
+        <div id="vision" className="md:min-h-screen">
+          <Vision />
+        </div>
+        <div id="projects" className="md:min-h-screen">
+          <Projects />
+        </div>
+        <div id="inauguration" className="md:min-h-screen">
+          <Inauguration />
+        </div>
+        <div id="contact">
+          {" "}
+          <Footer />
+        </div>
       </div>
-      <div id="about" className="md:min-h-screen">
-        <About />
-      </div>
-      <div id="vision" className="md:min-h-screen">
-        <Vision />
-      </div>
-      <div id="projects" className="md:min-h-screen">
-        <Projects />
-      </div>
-      <div id="inauguration" className="md:min-h-screen">
-        <Inauguration />
-      </div>
-      <div id="contact">
-        {" "}
-        <Footer />
-      </div>
-    </>
+    </div>
   );
 }
 

@@ -4,8 +4,8 @@ import { ImageDrawer } from "../components/ImageDrawer";
 
 const Inauguration = () => {
   return (
-    <div className="flex flex-col justify-center items-center">
-      <h1 className="m-4 text-xl md:text-4xl font-medium px-20 py-4 rounded-l-full rounded-r-full bg-blue-100 w-fit">
+    <div className="flex flex-col justify-center items-center w-screen">
+      <h1 className="m-4 text-xl md:text-4xl font-medium px-16 py-3 md:px-20 md:py-4 rounded-l-full rounded-r-full bg-blue-100 w-fit">
         Our Inauguration{" "}
       </h1>
       <p className="font-semibold p-4 text-center ">
