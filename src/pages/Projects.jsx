@@ -1,5 +1,6 @@
 import React from "react";
 import Caraosel from "../components/Caraosel";
+import { CLOUDINARY_URL, CLOUDINARY_VIDEO_URL } from "../utils/constants";
 
 const Projects = () => {
   return (
@@ -12,6 +13,13 @@ const Projects = () => {
         Excellence."
       </p>{" "}
       <Caraosel />
+      <div className="md:w-1/2 m-4 p-6 md:p-12 rounded-3xl bg-white border-t-2 shadow-lg">
+        <video
+          src={`${CLOUDINARY_VIDEO_URL}nnxdb9cmuz8quuefx9mp`}
+          alt="video"
+          controls
+        />
+      </div>
     </div>
   );
 };

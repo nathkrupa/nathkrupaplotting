@@ -1,6 +1,9 @@
 export const CLOUDINARY_URL =
   "https://res.cloudinary.com/dvdrkucjh/image/upload/";
 
+export const CLOUDINARY_VIDEO_URL =
+  "https://res.cloudinary.com/dvdrkucjh/video/upload/";
+
 export const carouselImages = [
   "rfp7l9hahlcaw6ay43g4",
   "axbf5sq1zsumokahrztn",
