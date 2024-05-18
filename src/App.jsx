@@ -8,6 +8,7 @@ import Vision from "./pages/Vision";
 import Projects from "./pages/Projects";
 import Inauguration from "./pages/Inauguration";
 import Footer from "./components/Footer";
+import Service from "./pages/Service";
 
 function App() {
   return (
@@ -22,15 +23,19 @@ function App() {
         <div id="about" className="md:min-h-screen">
           <About />
         </div>
+        <div id="inauguration" className="md:min-h-screen">
+          <Inauguration />
+        </div>
         <div id="vision" className="md:min-h-screen">
           <Vision />
         </div>
         <div id="projects" className="md:min-h-screen">
           <Projects />
         </div>
-        <div id="inauguration" className="md:min-h-screen">
-          <Inauguration />
+        <div id="service" className="md:min-h-screen">
+          <Service />
         </div>
+
         <div id="contact">
           {" "}
           <Footer />

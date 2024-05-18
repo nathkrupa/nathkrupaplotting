@@ -38,18 +38,22 @@ const Navbar = () => {
             <Link onClick={() => scrollToSection("about")}>About</Link>
           </li>
           <li className="hover:text-purple-700">
-            <Link onClick={() => scrollToSection("vision")}>Vision</Link>
-          </li>
-          <li className="hover:text-purple-700">
-            <Link onClick={() => scrollToSection("projects")}>Projects</Link>
-          </li>
-          <li className="hover:text-purple-700">
             <Link onClick={() => scrollToSection("inauguration")}>
               Inaugration
             </Link>
           </li>
           <li className="hover:text-purple-700">
+            <Link onClick={() => scrollToSection("vision")}>Vision</Link>
+          </li>
+          <li className="hover:text-purple-700">
+            <Link onClick={() => scrollToSection("projects")}>Projects</Link>
+          </li>
+
+          <li className="hover:text-purple-700">
             <Link onClick={() => scrollToSection("contact")}>Contact</Link>
+          </li>
+          <li className="hover:text-purple-700">
+            <Link onClick={() => scrollToSection("service")}>Service</Link>
           </li>
         </ul>
         {/* Dropdown menu for mobile screens */}
@@ -105,10 +109,20 @@ const Navbar = () => {
                 <Link
                   onClick={() => {
                     setShowMenu(false);
-                    scrollToSection("contact");
+                    scrollToSection("projects");
                   }}
                 >
-                  Contact
+                  Projects
+                </Link>
+              </li>
+              <li className="px-4 py-2 hover:bg-gray-100">
+                <Link
+                  onClick={() => {
+                    setShowMenu(false);
+                    scrollToSection("service");
+                  }}
+                >
+                  Service
                 </Link>
               </li>
             </ul>

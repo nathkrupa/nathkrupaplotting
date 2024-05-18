@@ -27,7 +27,9 @@ const Footer = () => {
             alt="logo"
             className="w-14 mx-5 object-cover"
           />
-          <h1 className="text-2xl font-semibold my-8">Nathkrupa Developers</h1>
+          <h1 className="text-2xl font-semibold my-8">
+            Nathkrupa Developers Plotting
+          </h1>
         </div>
         <div className="px-4 py-3 bg-white my-8 flex border justify-between border-gray-300 rounded-md shadow-sm">
           <input

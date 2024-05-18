@@ -9,8 +9,8 @@ const Home = () => {
     }
   };
   return (
-    <div className="w-screen flex flex-col mt-10 p-4 ">
-      <div className="flex flex-wrap">
+    <div className="w-screen flex  flex-col mt-10 p-4 ">
+      <div className="flex flex-wrap-reverse">
         {/* div1 */}
         <div className="flex flex-col justify-center md:my-14 py-28 md:pl-28 p-5 flex-1">
           <h1 className="text-2xl md:text-4xl grid p-2 gap-4">
@@ -41,11 +41,11 @@ const Home = () => {
           </div>
         </div>
         {/* div2 */}
-        <div className=" md:w-1/3  ">
+        <div className=" md:w-2/5  ">
           <img
             src="https://res.cloudinary.com/dvdrkucjh/image/upload/jdwpnqbem1dtbjbp5clr"
             alt="cover"
-            className=" object-cover w-full  md:my-24 "
+            className=" object-cover w-full  md:my-24 mt-24"
           />
         </div>
       </div>
