@@ -4,8 +4,6 @@ import { Menu } from "lucide-react"; // Import hamburger icon
 import { NavDrawer } from "./NavDrawer";
 
 const Navbar = () => {
-  const [showMenu, setShowMenu] = useState(false);
-
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -24,11 +22,6 @@ const Navbar = () => {
           />
         </Link>
         <div className="md:hidden">
-          {/* Hamburger icon */}
-          {/* <Menu
-            className="cursor-pointer"
-            onClick={() => setShowMenu(!showMenu)}
-          /> */}
           <NavDrawer />
         </div>
         {/* Navigation items for larger screens */}
@@ -58,78 +51,6 @@ const Navbar = () => {
             <Link onClick={() => scrollToSection("service")}>Service</Link>
           </li>
         </ul>
-        {/* Dropdown menu for mobile screens */}
-        {showMenu && (
-          <div className="absolute top-full left-0 w-full bg-white shadow-lg rounded-md z-50 md:hidden">
-            <ul className="py-2">
-              <li className="px-4 py-2 hover:bg-gray-100">
-                <Link to={"/"} onClick={() => setShowMenu(false)}>
-                  Home
-                </Link>{" "}
-              </li>
-              <li className="px-4 py-2 hover:bg-gray-100">
-                <Link
-                  onClick={() => {
-                    setShowMenu(false);
-                    scrollToSection("about");
-                  }}
-                >
-                  About
-                </Link>
-              </li>
-              <li className="px-4 py-2 hover:bg-gray-100">
-                <Link
-                  onClick={() => {
-                    setShowMenu(false);
-                    scrollToSection("vision");
-                  }}
-                >
-                  Vision{" "}
-                </Link>
-              </li>
-              <li className="px-4 py-2 hover:bg-gray-100">
-                <Link
-                  onClick={() => {
-                    setShowMenu(false);
-                    scrollToSection("projects");
-                  }}
-                >
-                  Projects
-                </Link>
-              </li>
-              <li className="px-4 py-2 hover:bg-gray-100">
-                <Link
-                  onClick={() => {
-                    setShowMenu(false);
-                    scrollToSection("inaugration");
-                  }}
-                >
-                  Inaugration
-                </Link>
-              </li>
-              <li className="px-4 py-2 hover:bg-gray-100">
-                <Link
-                  onClick={() => {
-                    setShowMenu(false);
-                    scrollToSection("projects");
-                  }}
-                >
-                  Projects
-                </Link>
-              </li>
-              <li className="px-4 py-2 hover:bg-gray-100">
-                <Link
-                  onClick={() => {
-                    setShowMenu(false);
-                    scrollToSection("service");
-                  }}
-                >
-                  Service
-                </Link>
-              </li>
-            </ul>
-          </div>
-        )}
       </div>
     </header>
   );
