@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu } from "lucide-react"; // Import hamburger icon
+import { NavDrawer } from "./NavDrawer";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -24,10 +25,11 @@ const Navbar = () => {
         </Link>
         <div className="md:hidden">
           {/* Hamburger icon */}
-          <Menu
+          {/* <Menu
             className="cursor-pointer"
             onClick={() => setShowMenu(!showMenu)}
-          />
+          /> */}
+          <NavDrawer />
         </div>
         {/* Navigation items for larger screens */}
         <ul className="hidden md:flex gap-16 text-lg font-semibold font-poppins">
