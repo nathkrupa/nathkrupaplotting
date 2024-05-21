@@ -29,10 +29,10 @@ const Home = () => {
             meticulously crafted to align with your unique vision.
           </p>
           <div className="flex gap-16">
-            <button className="bg-blue-500 px-4 py-2 text-sm md:text-base rounded-md md:px-6 shadow-lg md:py-3 text-white hover:bg-blue-600 ">
+            <button className="bg-blue-500 px-5 py-3 text-sm md:text-base rounded-md md:px-7 shadow-lg md:py-4 text-white hover:bg-blue-600 ">
               <Link onClick={() => scrollToSection("about")}> Learn More</Link>
             </button>
-            <button className="bg-blue-500 px-4 py-2 text-sm md:text-base rounded-md md:px-6 shadow-lg md:py-3 text-white hover:bg-blue-600 ">
+            <button className="bg-blue-500 px-5 py-3 text-sm md:text-base rounded-md md:px-7 shadow-lg md:py-4 text-white hover:bg-blue-600 ">
               <Link onClick={() => scrollToSection("contact")}>
                 {" "}
                 Contact Us
