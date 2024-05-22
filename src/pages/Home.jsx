@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -8,11 +8,57 @@ const Home = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const titleRef = useRef(null);
+  const leftRef = useRef(null);
+  const rightRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target === leftRef.current) {
+              entry.target.classList.add("animate-slideInFromLeft");
+              entry.target.classList.remove("opacity-0");
+            } else if (entry.target === rightRef.current) {
+              entry.target.classList.add("animate-slideInFromRight");
+              entry.target.classList.remove("opacity-0");
+            } else if (entry.target === titleRef.current) {
+              entry.target.classList.add("animate-fadeIn");
+            }
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    const titleElement = titleRef.current;
+
+    const leftElement = leftRef.current;
+    const rightElement = rightRef.current;
+
+    if (titleElement) observer.observe(titleElement);
+
+    if (leftElement) observer.observe(leftElement);
+    if (rightElement) observer.observe(rightElement);
+
+    return () => {
+      if (titleElement) observer.unobserve(titleElement);
+
+      if (leftElement) observer.unobserve(leftElement);
+      if (rightElement) observer.unobserve(rightElement);
+    };
+  }, []);
+
   return (
-    <div className="w-screen flex  flex-col mt-10 p-4 ">
+    <div className="w-screen flex  flex-col mt-10 p-4  ">
       <div className="flex flex-wrap-reverse">
         {/* div1 */}
-        <div className="flex flex-col justify-center md:my-14 py-28 md:pl-28 p-5 flex-1">
+        <div
+          ref={leftRef}
+          className=" flex flex-col justify-center md:my-14 py-28 md:pl-28 p-5 flex-1"
+        >
           <h1 className="text-2xl md:text-4xl grid p-2 gap-4">
             <>
               Nathkrupa
@@ -41,7 +87,7 @@ const Home = () => {
           </div>
         </div>
         {/* div2 */}
-        <div className=" md:w-2/5  ">
+        <div ref={rightRef} className=" md:w-2/5  ">
           <img
             src="https://res.cloudinary.com/dvdrkucjh/image/upload/jdwpnqbem1dtbjbp5clr"
             alt="cover"

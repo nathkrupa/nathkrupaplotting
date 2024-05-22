@@ -1,11 +1,56 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { CLOUDINARY_URL } from "../utils/constants";
 import { ImageDrawer } from "../components/ImageDrawer";
 
 const Inauguration = () => {
+  const titleRef = useRef(null);
+  const leftRef = useRef(null);
+  const rightRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target === leftRef.current) {
+              entry.target.classList.add("animate-slideInFromLeft");
+              entry.target.classList.remove("opacity-0");
+            } else if (entry.target === rightRef.current) {
+              entry.target.classList.add("animate-slideInFromRight");
+              entry.target.classList.remove("opacity-0");
+            } else if (entry.target === titleRef.current) {
+              entry.target.classList.add("animate-fadeIn");
+            }
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    const titleElement = titleRef.current;
+
+    const leftElement = leftRef.current;
+    const rightElement = rightRef.current;
+
+    if (titleElement) observer.observe(titleElement);
+
+    if (leftElement) observer.observe(leftElement);
+    if (rightElement) observer.observe(rightElement);
+
+    return () => {
+      if (titleElement) observer.unobserve(titleElement);
+
+      if (leftElement) observer.unobserve(leftElement);
+      if (rightElement) observer.unobserve(rightElement);
+    };
+  }, []);
+
   return (
     <div className="flex flex-col justify-center items-center w-screen">
-      <h1 className="m-4 text-xl md:text-4xl font-medium px-16 py-3 md:px-20 md:py-4 rounded-l-full rounded-r-full bg-blue-100 w-fit">
+      <h1
+        ref={titleRef}
+        className="m-4 text-xl md:text-4xl font-medium px-16 py-3 md:px-20 md:py-4 rounded-l-full rounded-r-full bg-blue-100 w-fit"
+      >
         Our Inauguration{" "}
       </h1>
       <p className="font-semibold p-4 text-center ">
@@ -15,7 +60,7 @@ const Inauguration = () => {
 
       <div className="w-full flex flex-wrap justify-center m-4 p-4 gap-8">
         {" "}
-        <div className="w-fit flex ">
+        <div ref={leftRef} className="w-fit flex ">
           <div>
             <img
               className=""
@@ -25,7 +70,7 @@ const Inauguration = () => {
             />
           </div>
         </div>
-        <div className="md:w-1/2 md:text-xl p-4">
+        <div ref={rightRef} className="md:w-1/2 md:text-xl p-4">
           <p>
             We are thrilled to announce the grand inauguration of Nathkrupa
             Construction, a momentous occasion marking the beginning of a new
