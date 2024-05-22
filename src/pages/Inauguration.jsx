@@ -57,10 +57,9 @@ const Inauguration = () => {
         "Explore Our Portfolio: Where Every Project Tells a Story of
         Excellence."
       </p>
-
       <div className="w-full flex flex-wrap justify-center m-4 p-4 gap-8">
         {" "}
-        <div ref={leftRef} className="w-fit flex ">
+        <div className="w-fit flex ">
           <div>
             <img
               className=""
@@ -70,8 +69,8 @@ const Inauguration = () => {
             />
           </div>
         </div>
-        <div ref={rightRef} className="md:w-1/2 md:text-xl p-4">
-          <p>
+        <div className="md:w-1/2 md:text-xl p-4">
+          <p ref={rightRef}>
             We are thrilled to announce the grand inauguration of Nathkrupa
             Construction, a momentous occasion marking the beginning of a new
             chapter in our journey of excellence. On [Date of Inauguration], we
@@ -82,10 +81,13 @@ const Inauguration = () => {
             <br></br>
             The inauguration ceremony was a testament to the dedication and hard
             work of our team, led by visionary founder Swapnil Pawar.
-          </p>
-          <ImageDrawer />
-        </div>
-      </div>
+          </p>{" "}
+          <div ref={titleRef}>
+            {" "}
+            <ImageDrawer />
+          </div>
+        </div>{" "}
+      </div>{" "}
     </div>
   );
 };
