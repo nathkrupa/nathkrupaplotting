@@ -29,7 +29,7 @@ export default function Carousel() {
   }, []);
 
   return (
-    <div className="glide-01 relative md:w-2/3 w-screen p-4">
+    <div className="glide-01 relative md:w-2/3 w-screen p-4 border-b-2">
       <div className="overflow-hidden" data-glide-el="track">
         <ul className="whitespace-no-wrap flex-no-wrap relative flex w-full overflow-hidden p-0">
           {carouselImages.map((image, index) => (

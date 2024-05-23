@@ -47,7 +47,7 @@ const Service = () => {
   return (
     <div
       ref={titleRef}
-      className="flex flex-col  justify-center items-center w-screen"
+      className="flex flex-col  justify-center items-center w-screen mt-7 "
     >
       <h1 className="m-4 text-xl md:text-4xl font-medium px-16 py-4 md:px-20 md:py-5 rounded-l-full rounded-r-full bg-blue-100 w-fit">
         Our Services

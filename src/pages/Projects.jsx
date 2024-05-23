@@ -42,13 +42,14 @@ const Projects = () => {
         Excellence."
       </p>{" "}
       <Caraosel />
-      <div className=" md:m-14 md:w-1/2 p-1  md:p-12 rounded-3xl md:bg-white border-t-2 md:shadow-lg">
+      <div className=" md:m-14 md:w-1/2 p-1 my-4  md:p-12 rounded-2xl md:bg-white  md:shadow-lg">
         <video
           src={`${CLOUDINARY_VIDEO_URL}nnxdb9cmuz8quuefx9mp`}
           alt="video"
           controls
         />
       </div>
+      <div className="border border-b-2 w-screen"></div>
     </div>
   );
 };
