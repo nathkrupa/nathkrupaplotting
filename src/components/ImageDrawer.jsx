@@ -23,10 +23,10 @@ export function ImageDrawer() {
       >
         <Drawer.Header
           title="Drawer"
-          className="cursor-pointer px-4 pt-4 hover:bg-gray-50 dark:hover:bg-gray-700"
+          className="cursor-pointer px-4 pt-4 hover:bg-gray-50 dark:hover:bg-gray-700  "
         />
-        <Drawer.Items className="p-4">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4  mx-auto max-h-96 overflow-y-auto">
+        <Drawer.Items className="p-4 ">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mx-auto max-h-[40rem] md:max-h-96 overflow-y-auto">
             {InaugurationImages.map((image, index) => (
               <img
                 key={index}

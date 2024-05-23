@@ -8,9 +8,15 @@ import { Link } from "react-router-dom";
 
 export function NavDrawer() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
-  const handleClose = () => setIsOpen(false);
-
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsOpen(false);
+      setIsClosing(false);
+    }, 1000);
+  };
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -23,7 +29,14 @@ export function NavDrawer() {
       <div className="flex  items-center justify-center">
         <Menu className="cursor-pointer  " onClick={() => setIsOpen(true)} />
       </div>
-      <Drawer open={isOpen} onClose={handleClose} position="right" className="">
+      <Drawer
+        open={isOpen}
+        onClose={handleClose}
+        position="right"
+        className={`transition-transform duration-600 ease-in-out ${
+          isOpen ? "animate-slideInFromRight" : ""
+        } ${isClosing ? "animate-slideOutToRight" : ""}`}
+      >
         <Drawer.Header title="MENU" titleIcon={() => <></>} />
         <Drawer.Items>
           <Sidebar
